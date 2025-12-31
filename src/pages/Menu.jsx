@@ -10,7 +10,7 @@ function Menu() {
     : menuItems.filter(item => item.category === selectedCategory);
 
   return (
-    <main className="py-8 md:py-12">
+    <main id="main-content" className="py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -22,12 +22,15 @@ function Menu() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap gap-3 justify-center mb-10">
+        <div className="flex flex-wrap gap-3 justify-center mb-10" role="tablist" aria-label="Menu categories">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-semibold transition-colors ${
+              role="tab"
+              aria-selected={selectedCategory === category}
+              aria-controls="menu-items"
+              className={`px-6 py-2 rounded-full font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 ${
                 selectedCategory === category
                   ? 'bg-green-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -39,7 +42,7 @@ function Menu() {
         </div>
 
         {/* Menu Items Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="menu-items" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="tabpanel">
           {filteredItems.length > 0 ? (
             filteredItems.map((item) => (
               <MenuCard key={item.id} item={item} />

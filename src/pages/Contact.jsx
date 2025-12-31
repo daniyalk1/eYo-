@@ -2,7 +2,7 @@ import WhatsAppButton from '../components/WhatsAppButton';
 
 function Contact() {
   return (
-    <main className="py-12 md:py-20">
+    <main id="main-content" className="py-12 md:py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">

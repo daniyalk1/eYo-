@@ -7,7 +7,7 @@ function Home() {
   const featuredItems = menuItems.slice(0, 3);
 
   return (
-    <main>
+    <main id="main-content">
       {/* Hero Section */}
       <section className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4">
@@ -21,11 +21,11 @@ function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/menu"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-full transition-colors shadow-lg hover:shadow-xl"
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-full transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
               >
                 View Menu
               </Link>
-              <WhatsAppButton className="px-8 py-4" />
+                <WhatsAppButton className="px-8 py-4" />
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ function Home() {
           <div className="text-center mt-10">
             <Link
               to="/menu"
-              className="text-green-600 hover:text-green-700 font-semibold text-lg"
+              className="text-green-600 hover:text-green-700 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 rounded"
             >
               View Full Menu →
             </Link>

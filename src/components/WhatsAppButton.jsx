@@ -7,8 +7,8 @@ function WhatsAppButton({ message = "Hello! I'd like to place an order.", classN
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl ${className}`}
-      aria-label="Order on WhatsApp"
+      className={`inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 ${className}`}
+      aria-label="Order on WhatsApp (opens in new tab)"
     >
       <svg
         className="w-5 h-5"
